@@ -61,6 +61,8 @@ const sources = [
 export const run = async (event, context: Context, callback: Callback) => {
   console.log("Start");
 
+  context.callbackWaitsForEmptyEventLoop = false;
+
   const bot = new TelegramBot(token);
 
   const chrome = await getChrome();
@@ -86,5 +88,5 @@ export const run = async (event, context: Context, callback: Callback) => {
 
   console.log("Done");
 
-  callback(null, "success");
+  callback(null, null);
 };
