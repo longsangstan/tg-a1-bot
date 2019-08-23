@@ -4,12 +4,21 @@ provider:
   profile: personal
   runtime: nodejs8.10
   region: ap-southeast-1
+  memorySize: 1536
+  timeout: 900
 
-plugins:
-  - serverless-plugin-typescript
-  - serverless-plugin-chrome
-  - serverless-offline
-  - serverless-dotenv-plugin
+functions:
+  scheduled:
+    handler: scheduled.scheduled
+    events:
+      - schedule: cron(0 0 * * ? *)
+  webhook:
+    handler: webhook.webhook
+    events:
+      - http:
+          path: webhook
+          method: post
+          cors: true
 
 package:
   include:
@@ -17,10 +26,8 @@ package:
   exclude:
     - node_modules/puppeteer/.local-chromium/**
 
-functions:
-  run:
-    handler: handler.run
-    memorySize: 1536MB
-    timeout: 900
-    events:
-      - schedule: cron(0 0 * * ? *)
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-chrome
+  - serverless-offline
+  - serverless-dotenv-plugin
