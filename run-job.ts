@@ -1,6 +1,6 @@
 import * as puppeteer from "puppeteer";
 import * as TelegramBot from "node-telegram-bot-api";
-import * as dayjs from "dayjs";
+import moment = require("moment-timezone");
 
 import { getChrome } from "./chrome-script";
 import sources from "./sources";
@@ -16,7 +16,10 @@ const chatId = process.env.CHAT_ID;
 
 const runJob = async () => {
   const bot = new TelegramBot(token);
-  await bot.sendMessage(chatId, `=====${dayjs().format("YYYY-MM-DD")}=====`);
+  await bot.sendMessage(
+    chatId,
+    `=====${moment.tz("Asia/Hong_Kong").format("YYYY-MM-DD HH:mm")}=====`
+  );
 
   const chrome = await getChrome();
   const browser = await puppeteer.connect({

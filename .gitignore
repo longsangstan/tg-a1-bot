@@ -8,3 +8,5 @@ jspm_packages
 .build/
 .DS_Store
 .env
+
+dev.js

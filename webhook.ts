@@ -11,9 +11,14 @@ export const webhook: APIGatewayProxyHandler = async (event, context) => {
   const body: Update = JSON.parse(event.body);
 
   const chatId = body.message.chat.id;
+  const senderId = body.message.from.id;
   const text = body.message.text;
 
-  if (chatId === parseInt(process.env.CHAT_ID) && text === "run job") {
+  if (
+    chatId === parseInt(process.env.CHAT_ID) &&
+    senderId === parseInt(process.env.TG_ID_SELF) &&
+    text === "run"
+  ) {
     console.log("[Info] Run job.");
     try {
       const lambda = new AWS.Lambda();
