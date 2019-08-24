@@ -29,15 +29,19 @@ const runJob = async () => {
   await page.emulate(iPhone);
   await page.setDefaultNavigationTimeout(0);
 
-  for (let index = 0; index < sources.length; index++) {
-    const element = sources[index];
+  for (let i = 0; i < sources.length; i++) {
+    await bot.sendMessage(chatId, `=====${sources[i].category}=====`);
 
-    await page.goto(element.url);
-    const img = await page.screenshot();
+    for (let j = 0; j < sources[i].list.length; j++) {
+      const element = sources[i].list[j];
 
-    await bot.sendPhoto(chatId, img, {
-      caption: `${element.title}\n${element.url}`
-    });
+      await page.goto(element.url);
+      const img = await page.screenshot();
+
+      await bot.sendPhoto(chatId, img, {
+        caption: `${element.title}\n${element.url}`
+      });
+    }
   }
 
   await bot.sendMessage(chatId, "====================");

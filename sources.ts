@@ -1,4 +1,4 @@
-const sources = [
+const hk = [
   {
     url: "https://www.mingpao.com/",
     title: "mingpao"
@@ -46,6 +46,48 @@ const sources = [
   {
     url: "https://www.hongkongfp.com/",
     title: "hongkongfp"
+  }
+];
+
+const world = [
+  {
+    url: "https://www.nytimes.com/",
+    title: "nytimes"
+  },
+  {
+    url: "https://www.bbc.com/",
+    title: "bbc"
+  },
+  {
+    url: "https://www.bloomberg.com",
+    title: "bloomberg"
+  },
+  {
+    url: "https://techcrunch.com",
+    title: "techcrunch"
+  },
+  {
+    url: "http://cn.chinadaily.com.cn/",
+    title: "chinadaily"
+  },
+  {
+    url: "https://m.ltn.com.tw/",
+    title: "ltn"
+  },
+  {
+    url: "https://elpais.com/",
+    title: "elpais"
+  }
+];
+
+const sources = [
+  {
+    category: "HK",
+    list: hk
+  },
+  {
+    category: "WORLD",
+    list: world
   }
 ];
 
