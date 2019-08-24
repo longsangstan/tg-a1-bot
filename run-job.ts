@@ -35,7 +35,9 @@ const runJob = async () => {
     await page.goto(element.url);
     const img = await page.screenshot();
 
-    await bot.sendPhoto(chatId, img, { caption: element.title });
+    await bot.sendPhoto(chatId, img, {
+      caption: `${element.title}\n${element.url}`
+    });
   }
 
   await bot.sendMessage(chatId, "====================");

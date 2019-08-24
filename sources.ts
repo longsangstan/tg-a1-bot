@@ -11,10 +11,10 @@ const sources = [
     url: "https://orientaldaily.on.cc/",
     title: "orientaldaily"
   },
-  // {
-  //   url: "https://www.hkej.com/",
-  //   title: "hkej"
-  // },
+  {
+    url: "https://www.hkej.com/",
+    title: "hkej"
+  },
   {
     url: "https://www.hket.com",
     title: "hket"
@@ -32,12 +32,20 @@ const sources = [
     title: "rthk"
   },
   {
+    url: "https://thestandnews.com/",
+    title: "thestandnews"
+  },
+  {
     url: "http://www.takungpao.com.hk/hongkong/",
     title: "takungpao"
   },
   {
     url: "https://www.scmp.com/",
     title: "scmp"
+  },
+  {
+    url: "https://www.hongkongfp.com/",
+    title: "hongkongfp"
   }
 ];
 

@@ -11,7 +11,7 @@ functions:
   scheduled:
     handler: scheduled.scheduled
     events:
-      - schedule: cron(0 0 * * ? *)
+      - schedule: cron(0 * * * ? *)
   webhook:
     handler: webhook.webhook
     events:
