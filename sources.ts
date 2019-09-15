@@ -51,8 +51,8 @@ const hk = [
 
 const world = [
   {
-    url: "https://www.nytimes.com/",
-    title: "nytimes"
+    url: "https://www.usatoday.com/",
+    title: "usatoday"
   },
   {
     url: "https://www.bbc.com/",
@@ -73,10 +73,6 @@ const world = [
   {
     url: "https://m.ltn.com.tw/",
     title: "ltn"
-  },
-  {
-    url: "https://elpais.com/",
-    title: "elpais"
   }
 ];
 
