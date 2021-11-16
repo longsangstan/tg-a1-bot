@@ -14,7 +14,7 @@
     "@types/aws-lambda": "^8.10.31",
     "@types/moment-timezone": "^0.5.12",
     "@types/node-telegram-bot-api": "^0.31.0",
-    "aws-sdk": "^2.516.0",
+    "aws-sdk": "^2.814.0",
     "chrome-launcher": "^0.10.5",
     "moment-timezone": "^0.5.26",
     "node-telegram-bot-api": "^0.30.0",
