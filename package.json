@@ -16,7 +16,7 @@
     "@types/node-telegram-bot-api": "^0.31.0",
     "aws-sdk": "^2.516.0",
     "chrome-launcher": "^0.10.5",
-    "moment-timezone": "^0.5.26",
+    "moment-timezone": "^0.5.35",
     "node-telegram-bot-api": "^0.30.0",
     "puppeteer": "^1.11.0",
     "serverless-offline": "^3.31.3",
